@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jumpfirst</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Automatically jump to home page after <span id="time">5</span> seconds</p>
+
+    <script>
+        var second = 5;
+        var tim = document.getElementById("time");
+        function showtime() {
+            second--;
+            if (second <= 0) {
+                location.href = "http://www.baidu.com";
+            }
+
+            tim.innerHTML = second;
+        }
+        setInterval(showtime, 1000);
+    </script>
+
+</body>
+
+</html>
